@@ -36,37 +36,26 @@ const people = [
   }
 ];
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
   return (
-    <section className=" bottom-0 w-full bg-gray-800 text-white py-4 text-center">
-       <Link href="/" className="flex items-center gap-1">
+    <section className=" bottom-0 w-full bg-transparent text-white py-4 text-center mt-4">
+       <Link href="/" className="flex items-center gap-1 justify-center">
         <Image
-          src="/icons/logo.svg"
+          src="/images/final-logo.png"
           width={32}
           height={32}
-          alt="Connect Up"
+          alt="TeamWave"
           className="max-sm:size-10"
         />
-        <p className="text-[16px] text-white font-extrabold max-sm:text-[10px]">
+        <p className="text-[14px] text-white font-extrabold max-sm:text-[10px]">
           TeamWave
         </p>
         
       </Link>      
-      <div className='flex box-border h-1 w-80 text-black p-4 max-sm:w-24'>
-      <p className='text-white font-semibold max-sm:text-[5px]'> Subscribe for the Newslater</p>
-        </div>
-     
- 
-      <div className='flex box-border h-14 w-48 text-black p-4 max-sm:w-24'>
-          <Input/>
-         <Button/>
-        </div>
-        <div className="flex flex-row items-center justify-center mb-10 w-full max-sm:hidden">
+
+      <div className="flex flex-row items-center justify-center mb-1 mt-1 w-full max-sm:hidden">
         
-        <AnimatedTooltip items={people} />
-      </div>
-      <div className="flex flex-row items-center justify-center mb-10 w-full max-sm:hidden">
-        
-      <p className='text-white '>@2024-All rights reserved</p>
+      <p className='text-sm text-gray-400'>@{currentYear}-All rights Reserved</p>
       </div>
       
     </section>

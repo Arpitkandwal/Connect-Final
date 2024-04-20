@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import { ImagesSlider } from "./ui/images-slider";
 import Link from "next/link";
+import { MultiStepLoaderDemo } from "./FeatureButton";
 // import { ImagesSlider } from "../ui/";
 
 export default function ImagesSliderDemo() {
@@ -13,7 +14,7 @@ export default function ImagesSliderDemo() {
  
   ];
   return (
-    <ImagesSlider className="h-[40rem]" images={images}>
+    <ImagesSlider className="h-[40rem] mb-[-80px]" images={images}>
       <motion.div
         initial={{
           opacity: 0,
@@ -28,14 +29,18 @@ export default function ImagesSliderDemo() {
         }}
         className="z-50 flex flex-col justify-center items-center"
       >
-        <motion.p className="font-bold text-xl md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
-        TeamWave: Amplify Collaboration Effortlessly. Ride the Wave to Productive Meetings! <br /> simpler,
-smarter, and more flexible Teams
+        <motion.p className="font-bold text-xl md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4 max-w-[75%]">
+        Empower remote teams with seamless collaboration and communication. Work smarter, together!
         </motion.p>
-        <button className="px-4 py-2 backdrop-blur-sm border bg-emerald-300/10 border-emerald-500/20 text-white mx-auto text-center rounded-full relative mt-4">
-          <Link href='/meeting'>Join now →</Link>
-          <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-emerald-500 to-transparent" />
+       <div className="flex items-center justify-center space-x-5">
+       <button className="px-8 py-3 backdrop-blur-sm border bg-emerald-300/10 border-emerald-500/20 text-white mx-auto text-center rounded-full relative">
+          <Link href='/home'>Join now →</Link>
+          <div className="absolute inset-x-0 h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-emerald-500 to-transparent" />
         </button>
+        <button>
+          <MultiStepLoaderDemo/>
+        </button>
+       </div>
       </motion.div>
     </ImagesSlider>
   );

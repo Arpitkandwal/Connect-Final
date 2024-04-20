@@ -14,9 +14,9 @@ export default function LampDemo() {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
+        className="mt-0 bg-gradient-to-br from-slate-300 to-slate-500 py-1 bg-clip-text text-center text-3xl font-medium tracking-tight text-transparent md:text-6xl mb-[-80px] rounded-none"
       >
-        Right time  <br /> to join the meet
+        Your Remote Team&apos;s <br/> Productivity Powerhouse!
       </motion.h1>
     </LampContainer>
   );

@@ -7,10 +7,12 @@ import React, { useEffect, useState } from "react";
 import MeetingCard from "./MeetingCard";
 import Loader from "./Loader";
 import { useToast } from "./ui/use-toast";
+import { Ban } from "lucide-react";
 
 interface Props {
   type: "upcoming" | "ended" | "recording";
 }
+
 
 const CallList = ({ type }: Props) => {
   const router = useRouter();
@@ -32,12 +34,21 @@ const CallList = ({ type }: Props) => {
     }
   };
 
+  const NoRecordings = () => {
+    return (
+      <div className="flex items-center space-x-2 animate-pulse">
+        <Ban className="h-5 w-5"/>
+        <h1>No Recordings</h1>
+      </div>
+    )
+  }
+
   const getNoCallsMessage = () => {
     switch (type) {
       case "ended":
         return "No Previous Calls";
       case "recording":
-        return "No Recordings";
+        return <NoRecordings/>;
       case "upcoming":
         return "No Upcoming Calls";
       default:
@@ -64,7 +75,7 @@ const CallList = ({ type }: Props) => {
     };
 
     if (type === "recording") fetchRecording();
-  }, [type, getRecordings]);
+  }, [type, getRecordings,toast]);
 
   const calls = getCalls();
   const noCallsMessage = getNoCallsMessage();

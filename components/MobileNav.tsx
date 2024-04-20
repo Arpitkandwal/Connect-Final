@@ -23,17 +23,17 @@ const MobileNav = () => {
             src="/icons/hamburger.svg"
             width={36}
             height={36}
-            alt="Connect Up"
+            alt="TeamWave"
             className="cursor-pointer sm:hidden"
           />
         </SheetTrigger>
         <SheetContent side="left" className="border-none bg-dark-1">
           <Link href="/" className="flex items-center gap-1">
             <Image
-              src="/icons/logo.svg"
+              src="/images/final-logo.png"
               width={32}
               height={32}
-              alt="Connect Up"
+              alt="TeamWave"
               className="max-sm:size-10"
             />
             <p className="text-[26px] text-white font-extrabold">Connect Up</p>

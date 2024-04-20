@@ -4,7 +4,7 @@ import React from "react";
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <main>
-      <StreamVideoProvider>{children}</StreamVideoProvider>
+      <StreamVideoProvider>{children}</StreamVideoProvider> 
     </main>
   );
 };

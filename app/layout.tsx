@@ -9,7 +9,7 @@ import "react-datepicker/dist/react-datepicker.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Connect Up",
+  title: "TeamWave",
   description: "Meet and connect with your friends",
   icons: {
     icon: "./favicon.ico",
@@ -26,7 +26,7 @@ export default function RootLayout({
       <ClerkProvider
         appearance={{
           layout: {
-            logoImageUrl: "/icons/logo.svg",
+            logoImageUrl: "/images/final-logo.png",
             socialButtonsVariant: "iconButton",
           },
           variables: {
