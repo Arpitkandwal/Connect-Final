@@ -14,7 +14,7 @@ export default function ImagesSliderDemo() {
  
   ];
   return (
-    <ImagesSlider className="h-[40rem] mb-[-80px]" images={images}>
+    // <ImagesSlider className="h-[40rem] mb-[-80px]" images={images}>
       <motion.div
         initial={{
           opacity: 0,
@@ -42,6 +42,6 @@ export default function ImagesSliderDemo() {
         </button>
        </div>
       </motion.div>
-    </ImagesSlider>
+    // </ImagesSlider>
   );
 }
